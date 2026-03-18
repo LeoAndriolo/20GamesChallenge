@@ -30,8 +30,9 @@ This repository serves as a **central hub**, where I keep track of all games, th
 | 05 | Space Invaders | Not Started | [Repo](#) |
 | 06 | Asteroids | Not Started | [Repo](#) |
 | 07 | Pac-Man | Not Started | [Repo](#) |
+| 08 | ... | Not Started | [Repo](#) |
 
-## Status Legend
+### Status Legend
 
 - Not Started
 - In Progress
