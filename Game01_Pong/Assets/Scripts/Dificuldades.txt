@@ -1,0 +1,5 @@
+- Apertar o Play com muita coisa implementada atrapalha debugar o código.
+- Testar de pouco em pouco.
+- Primeiro Play mostrou que os elementos estavam em Layers errados.
+- Os paddles estavam rotacionados em -90 por conta de criá-los baseados em outro objeto.
+- Isso causou a movimentação horizontal e não vertical.
