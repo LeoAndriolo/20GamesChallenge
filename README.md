@@ -2,6 +2,8 @@
 
 This repository tracks my progress in the **20 Games Challenge**, a project focused on learning game development by building multiple small games.
 
+🔗 Original challenge: https://20_games_challenge.gitlab.io
+
 ## Objective
 
 The goal of this challenge is to improve my skills in:
