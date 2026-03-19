@@ -8,6 +8,15 @@ public class GameManager : MonoBehaviour
     public int rightScore;
     public int goalsToWin = 3;
 
+    public AudioSource audioSource;
+
+    public AudioClip goalSound;
+    public float goalVolume = 0.7f;
+    public AudioClip winSound;
+    public float winVolume = 1f;
+    public AudioClip loseSound;
+    public float loseVolume = 1f;
+    
     public TextMeshProUGUI leftScoreText;
     public TextMeshProUGUI rightScoreText;
     public TextMeshProUGUI resultText;
@@ -53,6 +62,8 @@ public class GameManager : MonoBehaviour
         leftScore++;
         UpdateScoreUI();
 
+        audioSource.PlayOneShot(goalSound, goalVolume);
+
         if (leftScore >= goalsToWin)
         {
             StartCoroutine(EndGameRoutine("You Lose!"));
@@ -68,6 +79,8 @@ public class GameManager : MonoBehaviour
 
         rightScore++;
         UpdateScoreUI();
+
+        audioSource.PlayOneShot(goalSound, goalVolume);
 
         if (rightScore >= goalsToWin)
         {
@@ -91,6 +104,17 @@ public class GameManager : MonoBehaviour
 
         resultText.text = message;
         resultPanel.SetActive(true);
+
+        if (message == "You Win!")
+        {
+            audioSource.Stop();
+            audioSource.PlayOneShot(winSound, winVolume);
+        }
+        else
+        {
+            audioSource.Stop();
+            audioSource.PlayOneShot(loseSound, loseVolume);
+        }
 
         yield return new WaitForSecondsRealtime(2f);
 
