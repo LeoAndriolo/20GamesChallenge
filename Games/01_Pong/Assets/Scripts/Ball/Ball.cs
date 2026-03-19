@@ -16,11 +16,18 @@ public class Ball : MonoBehaviour
         transform.position = Vector3.zero;
         rb.linearVelocity = Vector2.zero;
 
+        GetComponent<Collider2D>().enabled = true;
+
         float randomY = Random.Range(-1f, 1f);
         float randomX = Random.value < 0.5f ? -1f : 1f;
 
         Vector2 direction = new Vector2(randomX, randomY).normalized;
         rb.linearVelocity = direction * startSpeed;
+    }
+
+    public void StopBall()
+    {
+        rb.linearVelocity = Vector2.zero;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
