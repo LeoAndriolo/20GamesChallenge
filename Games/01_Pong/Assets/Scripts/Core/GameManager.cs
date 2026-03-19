@@ -12,16 +12,15 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI rightScoreText;
     public TextMeshProUGUI resultText;
     public GameObject menuPanel;
+    public GameObject resultPanel;
 
     public Ball ball;
-
     public GameState currentState;
-
 
     private void Start()
     {
         UpdateScoreUI();
-        resultText.gameObject.SetActive(false);
+        resultPanel.SetActive(false);
         SetState(GameState.Menu);
     }
 
@@ -29,9 +28,8 @@ public class GameManager : MonoBehaviour
     {
         leftScore = 0;
         rightScore = 0;
-
         UpdateScoreUI();
-        resultText.gameObject.SetActive(false);
+        resultPanel.SetActive(false);
 
         SetState(GameState.Playing);
         ball.ResetBall();
@@ -41,14 +39,11 @@ public class GameManager : MonoBehaviour
     {
         leftScore = 0;
         rightScore = 0;
-
         UpdateScoreUI();
-        resultText.gameObject.SetActive(false);
+        resultPanel.SetActive(false);
 
         if (currentState == GameState.Playing)
-        {
             ball.ResetBall();
-        }
     }
 
     public void AddPointToLeftPlayer()
@@ -60,7 +55,7 @@ public class GameManager : MonoBehaviour
 
         if (leftScore >= goalsToWin)
         {
-            StartCoroutine(EndGameRoutine("Left Player Wins!"));
+            StartCoroutine(EndGameRoutine("You Lose!"));
             return;
         }
 
@@ -76,14 +71,14 @@ public class GameManager : MonoBehaviour
 
         if (rightScore >= goalsToWin)
         {
-            StartCoroutine(EndGameRoutine("Right Player Wins!"));
+            StartCoroutine(EndGameRoutine("You Win!"));
             return;
         }
 
         ball.ResetBall();
     }
 
-    void UpdateScoreUI()
+    private void UpdateScoreUI()
     {
         leftScoreText.text = leftScore.ToString();
         rightScoreText.text = rightScore.ToString();
@@ -92,11 +87,10 @@ public class GameManager : MonoBehaviour
     private IEnumerator EndGameRoutine(string message)
     {
         SetState(GameState.GameOver);
-
         ball.StopBall();
 
         resultText.text = message;
-        resultText.gameObject.SetActive(true);
+        resultPanel.SetActive(true);
 
         yield return new WaitForSecondsRealtime(2f);
 
@@ -107,11 +101,9 @@ public class GameManager : MonoBehaviour
     {
         leftScore = 0;
         rightScore = 0;
-
         UpdateScoreUI();
 
-        resultText.gameObject.SetActive(false);
-
+        resultPanel.SetActive(false);
         ball.StopBall();
         ball.transform.position = Vector3.zero;
 
@@ -130,10 +122,6 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GameState.Playing:
-                Time.timeScale = 1f;
-                menuPanel.SetActive(false);
-                break;
-
             case GameState.GameOver:
                 Time.timeScale = 1f;
                 menuPanel.SetActive(false);
