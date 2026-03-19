@@ -3,7 +3,8 @@
 
 # 🏓 Pong (Unity)
 
-A simple **Pong clone built in Unity**, developed as part of a game development learning journey.
+A simple **Pong clone built in Unity**, developed as part of the  
+[20 Games Challenge](https://github.com/LeoAndriolo/20GamesChallenge).
 
 This project focuses on core gameplay systems, clean architecture, and basic game feel improvements such as sound effects and UI flow.
 
@@ -40,11 +41,11 @@ This project focuses on core gameplay systems, clean architecture, and basic gam
 
 ## ⚠️ Challenges & Lessons Learned
 
-- Pressing Play with too many systems implemented at once made debugging harder  
-- Testing features incrementally made issues easier to isolate  
-- First Play revealed incorrect Layer configuration on game objects  
-- Paddles were rotated at -90 degrees because they were created from another object  
-- This caused horizontal movement instead of vertical movement  
+- Building too many systems at once made debugging difficult — breaking the work into smaller steps made issues easier to identify and fix
+- Early playtesting revealed misconfigured Layers, which affected collisions and overall game behavior
+- Reusing objects without checking transforms led to unintended rotation (-90°) on paddles
+- This rotation caused incorrect movement (horizontal instead of vertical), highlighting the importance of validating object orientation and local axes
+- Small setup mistakes in Unity (Transforms, Layers, Colliders) can have a big impact on gameplay, reinforcing the need for early and frequent testing 
 
 ---
 
@@ -72,39 +73,41 @@ This project focuses on core gameplay systems, clean architecture, and basic gam
 
 1. Clone the repository:
 
-    git clone https://github.com/your-username/pong-unity.git
+    git clone https://github.com/LeoAndriolo/20GamesChallenge.git
 
 2. Open the project in Unity Hub  
 
-3. Open the main scene:
+3. Navigate to the Pong project folder:
+
+    Games/01_Pong
+
+4. Open the main scene:
 
     Assets/Scenes/MainScene
 
-4. Press ▶️ Play  
+5. Press ▶️ Play  
 
 ---
 
 ## 📂 Project Structure
 
-    Assets/
-     ├── Scripts/
-     │    └── Runtime/
-     │         ├── GameManager.cs
-     │         ├── Ball.cs
-     │         ├── PaddleController.cs
-     │         └── GameState.cs
-     │
-     ├── Scenes/
-     └── Prefabs/
+    Games/
+     └── 01_Pong/
+          └── Assets/
+               ├── Audio/
+               ├── Input/
+               ├── Materials/
+               ├── Scenes/
+               └── Scripts/
 
 ---
 
 ## 🔥 Future Improvements
 
-- Add difficulty selection for AI  
+- Add difficulty UI selection for AI  
 - Add sound variations  
 - Add visual effects (particles, trails)  
-- Add main menu with game mode selection  
+- Add main menu with game mode selection (2 players or vs IA)
 - Improve UI animations  
 - Add local multiplayer (2 players)  
 
