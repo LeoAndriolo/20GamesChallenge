@@ -4,8 +4,8 @@ public class PaddleController : MonoBehaviour
 {
     public float moveSpeed = 8f;
     public bool isLeftPlayer = true;
-    public float minY = -3.2f;
-    public float maxY = 3.2f;
+    public float minY = -3;
+    public float maxY = 3;
 
     private PlayerControls controls;
     private float moveInput;
