@@ -3,10 +3,11 @@
 
 # 🏓 Pong (Unity)
 
-A simple **Pong clone built in Unity**, developed as part of the  
-[20 Games Challenge](https://github.com/LeoAndriolo/20GamesChallenge).
+A simple **Pong clone built in Unity**, developed as part of the [20 Games Challenge](https://github.com/LeoAndriolo/20GamesChallenge).
 
 This project focuses on core gameplay systems, clean architecture, and basic game feel improvements such as sound effects and UI flow.
+
+Play it here: [Pong](https://leoandriolo.itch.io/pong-20gameschallenge)
 
 ---
 
