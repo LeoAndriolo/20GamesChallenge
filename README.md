@@ -25,8 +25,8 @@ This repository serves as a **central hub**, where I keep track of all games, th
 
 | # | Game | Status | Repository |
 |---|------|--------|------------|
-| 01 | Pong | In Progress | [Repo](https://github.com/LeoAndriolo/20GamesChallenge/tree/main/Games/01_Pong) |
-| 02 | Breakout | Not Started | [Repo](#) |
+| 01 | Pong | Completed | [Repo](https://github.com/LeoAndriolo/20GamesChallenge/tree/main/Games/01_Pong) |
+| 02 | Breakout | In Progress | [Repo](#) |
 | 03 | Flappy Bird | Not Started | [Repo](#) |
 | 04 | Snake | Not Started | [Repo](#) |
 | 05 | Space Invaders | Not Started | [Repo](#) |
@@ -44,7 +44,7 @@ This repository serves as a **central hub**, where I keep track of all games, th
 ## Progress
 
 - [x] Initial setup
-- [ ] Game 01 - Pong
+- [x] Game 01 - Pong
 - [ ] Game 02 - Breakout
 - [ ] Game 03 - Flappy Bird
 
