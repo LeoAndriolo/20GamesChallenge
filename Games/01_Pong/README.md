@@ -90,18 +90,18 @@ This project focuses on core gameplay systems, clean architecture, and basic gam
 ---
 
 ## 📂 Project Structure
-
-Games/
- └── 01_Pong/
+ 
+   Games/
+    └── 01_Pong/
       └── Assets/
-           ├── Art/
-           ├── Audio/
-           ├── Fonts/
-           ├── Input/
-           ├── Materials/
-           ├── Prefabs/
-           ├── Scenes/
-           └── Scripts/
+          ├── Art/
+          ├── Audio/
+          ├── Fonts/
+          ├── Input/
+          ├── Materials/
+          ├── Prefabs/
+          ├── Scenes/
+          └── Scripts/
 
 ---
 
