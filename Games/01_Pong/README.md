@@ -91,25 +91,44 @@ This project focuses on core gameplay systems, clean architecture, and basic gam
 
 ## 📂 Project Structure
 
-    Games/
-     └── 01_Pong/
-          └── Assets/
-               ├── Audio/
-               ├── Input/
-               ├── Materials/
-               ├── Scenes/
-               └── Scripts/
+Games/
+ └── 01_Pong/
+      └── Assets/
+           ├── Art/
+           ├── Audio/
+           ├── Fonts/
+           ├── Input/
+           ├── Materials/
+           ├── Prefabs/
+           ├── Scenes/
+           └── Scripts/
 
 ---
 
 ## 🔥 Future Improvements
 
 - Add difficulty UI selection for AI  
-- Add sound variations  
 - Add visual effects (particles, trails)  
 - Add main menu with game mode selection (2 players or vs IA)
 - Improve UI animations  
 - Add local multiplayer (2 players)  
+
+---
+
+## 📝 Changelog
+
+### Version 1.01 - 2026-03-30
+
+**🐞 Bug Fixes**
+- Fixed paddle corner collision inconsistencies  
+- Resolved double kick issue on paddle collision  
+- Fixed bug where the ball could escape through the wall after the first goal  
+- Improved consistency of ball behavior when bouncing on walls  
+
+**✨ New Features**
+- Added paddle image to the start screen  
+- Added wall hit sound effects  
+- Updated font to Press Start 2P  
 
 ---
 
