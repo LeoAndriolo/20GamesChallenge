@@ -91,18 +91,20 @@ Play it here: [Pong](https://leoandriolo.itch.io/pong-20gameschallenge)
 ---
 
 ## 📂 Project Structure
-
+ 
+```text
 Games/
- └── 01_Pong/
-      └── Assets/
-           ├── Art/
-           ├── Audio/
-           ├── Fonts/
-           ├── Input/
-           ├── Materials/
-           ├── Prefabs/
-           ├── Scenes/
-           └── Scripts/
+└── 01_Pong/
+    └── Assets/
+        ├── Art/
+        ├── Audio/
+        ├── Fonts/
+        ├── Input/
+        ├── Materials/
+        ├── Prefabs/
+        ├── Scenes/
+        └── Scripts/
+```
 
 ---
 
